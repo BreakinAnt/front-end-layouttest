@@ -202,6 +202,7 @@ body {
     font-size: 1.1rem;
     color: #555;
 }
+
 #table-stats {
     display: flex;
     align-items: flex-end;
@@ -210,7 +211,7 @@ body {
     flex-basis: auto;
     flex-direction: row;
     margin-top: 5%;
-    width: 100%;
+    width: min-content;
 }
 
 #table-stats div{
@@ -223,28 +224,25 @@ body {
     bottom: 0;
     background-color: #0088ed;
 }
+
 .table-top {
-    background: linear-gradient(90deg, #005499 0%, #0088ed 100%);
-    color: #fff;
-    padding: 1.2em 0.5em 0.7em 0.5em;
-    text-align: center;
+    background-color: #005499;
 }
-.table-top h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.2em;
+
+#table2 .table-bottom{
+    padding-bottom: 10%;
 }
-.table-top p {
-    font-size: 1rem;
-    font-weight: 400;
+#table3 .table-bottom{
+    padding-bottom: 40%;
 }
-.table-bottom {
-    background: #0088ed;
-    color: #fff;
-    padding: 1em 0.7em 1.2em 0.7em;
-    font-size: 0.98rem;
-    min-height: 70px;
-    text-align: center;
+#table4 .table-bottom{
+    padding-bottom: 70%;
+}
+#table5 .table-bottom{
+    padding-bottom: 80%;
+}
+#table6 .table-bottom{
+    padding-bottom: 100%;
 }
 
 
@@ -344,14 +342,18 @@ footer p {
     }
     #table-stats {
         flex-direction: column;
-        gap: 2vw;
+        justify-content: center;
         align-items: center;
+        width: 100%;
         margin-top: 24px;
     }
+    
     #table-stats > div {
         min-width: 90vw;
-        max-width: 98vw;
-        margin-bottom: 1.2em;
-        border-radius: 12px;
+        border-radius: 12px;       
+    }
+
+    #table-stats > div > div {
+        padding: 1rem !important;
     }
 }
